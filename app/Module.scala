@@ -6,7 +6,7 @@ import play.api.libs.concurrent.AkkaGuiceSupport
 class Module extends AbstractModule with AkkaGuiceSupport {
 
   override def configure(): Unit = {
-    bindActor[CustomerActor]("customer-actor")
+    bindActor[CustomerActor](name = "customer-actor")
   }
 
 }
